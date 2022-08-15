@@ -40,7 +40,7 @@ function formatEnum(lines) {
 function formatStruct(lines) {
     var idx = 1
     for (var i in lines) {
-        var m = lines[i].match(/^(\s+)\d*:?\s*(\S+.*)/)
+        var m = lines[i].match(/^(\s+)\d*:?\s*(\w+.*)/)
         if (m) {
             lines[i] = `${m[1]}${idx}: ${m[2]}`
             idx += 1
